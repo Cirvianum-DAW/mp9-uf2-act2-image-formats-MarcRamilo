@@ -29,6 +29,54 @@
             </li>
         </ul>
     </nav>
+    <h1 class="text-4xl pl-10">Questions</h1>
+    <p class="text-base text-blue-600 pl-10 pb-10">plujaEstels and postaDeSol: What format is the most optimal for this type of image and why? With what compression quality does the image not lose quality? Can we reduce its size even more without losing quality? What would happen if we save the image several times with JPEG format?</p>
+    <p class="text-base text-green-600 pl-10 pb-10"> JPEG is a common format for photographs and images with gradients, as it supports lossy compression. The optimal compression quality depends on the specific image and the desired balance between file size and image quality. In general, a compression quality setting of 80-90 is often considered a good range.
+
+        Reducing the size of a JPEG image without losing quality can be challenging, as JPEG is a lossy compression format. Once an image is compressed, some information is lost, and further compression may lead to visible artifacts.
+        
+        Saving an image multiple times in JPEG format can result in cumulative loss of quality, known as generation loss. Therefore, it's best to avoid repeated saving in JPEG if maintaining high image quality is crucial.
+         </p>
+         <p class="text-base text-blue-600 pl-10 pb-10">Have a look at developerTools' Lighthouse tool. This allows you, among other things, to analyze the loading of the images. Check the performance of the different pages you have created.
+            What does Lighthouse tell about the image related perfomance of your pages? What are the main issues? What are the main recommendations? </p>
+         <ul class="pl-10">
+            <li>
+              <strong>Performance:</strong>
+              <ul>
+                <li>The web page shows mixed performance with a good First Contentful Paint (2.7s) but a delayed Largest Contentful Paint (152.1s).</li>
+                <li>Recommendations include optimizing images, eliminating render-blocking resources, and reducing unused CSS.</li>
+              </ul>
+            </li>
+          
+            <li>
+              <strong>Accessibility:</strong>
+              <ul>
+                <li>Scores 92, indicating good accessibility, but suggests addressing contrast issues for better content legibility.</li>
+              </ul>
+            </li>
+          
+            <li>
+              <strong>Best Practices:</strong>
+              <ul>
+                <li>Scores 96 and advises checking for and resolving browser errors logged to the console.</li>
+              </ul>
+            </li>
+          
+            <li>
+              <strong>SEO:</strong>
+              <ul>
+                <li>Scores 92, recommends adding a meta description for improved search engine optimization.</li>
+              </ul>
+            </li>
+          
+            <li>
+              <strong>PWA:</strong>
+              <ul>
+                <li>Scores 55, indicating issues related to Progressive Web App features such as installability, custom splash screen, and manifest validation. Improvements are needed for a better PWA experience.</li>
+              </ul>
+            </li>
+          </ul>
+          <img class="mx-auto" src="../images/plujaEstels/pluja_Estels_analisis.png">
     <main class="text-base text-center p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
         <div>
             <h1>Original</h1>
@@ -46,7 +94,7 @@
             <div class="image-info"></div>
         </div>
         <div>
-            <h1>Original JPG High Compress</h1>
+            <h1>Original JPG Low Compress</h1>
             <img src="../images/plujaEstels/plujaEstels_c9.jpg" alt="Example 2" class="w-full" />
             <div class="image-info"></div>
         </div>
@@ -56,7 +104,7 @@
             <div class="image-info"></div>
         </div>
         <div>
-            <h1>Original JPG Low Compress</h1>
+            <h1>Original JPG High Compress</h1>
             <img src="../images/plujaEstels/plujaEstels_c1.jpg" alt="Example 2" class="w-full" />
             <div class="image-info"></div>
         </div>

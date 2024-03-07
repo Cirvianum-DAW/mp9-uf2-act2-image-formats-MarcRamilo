@@ -13,6 +13,7 @@
     <header class="bg-blue-500 text-white text-center p-5">
         <h1 class="text-4xl">Image Format Experiment</h1>
     </header>
+    
     <nav>
         <ul class="flex justify-center bg-blue-300 p-5">
             <li class="mx-5">
@@ -29,7 +30,29 @@
             </li>
         </ul>
     </nav>
+    <h1 class="text-4xl pl-10">Questions</h1>
+    <p class="text-base text-blue-600 pl-10 pb-10">logotip: What format is the most optimal for this type of image and why? Can its size be reduced even more? Would it lose quality?</p>
+    <p class="text-base text-green-600 pl-10 pb-10"> The optimal format for the logo, with transparency, is PNG.
+        PNG supports lossless compression, meaning image quality is maintained while still having a relatively small file size.
+        You can reduce the size of a PNG image to some extent without a noticeable loss in quality, especially if the original image is a higher resolution. However, reducing the size excessively causes a loss of detail and sharpness. Although if we compare it with jpg we see that it has lost much more detail than png </p>
+<p class="text-base text-green-600 pl-10 pb-10">More color depth in a PNG image provides smoother gradation and fine detail, but comes with a larger file size, while less color depth optimizes size but can limit accuracy in the representation of color and detail.</p>
+<p class="text-base text-blue-600 pl-10 pb-10">Have a look at developerTools' Lighthouse tool. This allows you, among other things, to analyze the loading of the images. Check the performance of the different pages you have created.
+    What does Lighthouse tell about the image related perfomance of your pages? What are the main issues? What are the main recommendations? </p>
+    <ul class="text-base text-green-600 pl-10 pb-10">
+        <li>Rendering the largest content element on the pages took 10.2 seconds, indicating potential slowness in loading key visual content.</li>
+        
+        <li>Lighthouse recommends adopting next-generation image formats for a potential savings of 1079 KiB and removing blocking resources to improve rendering performance.</li>
+        
+        <li>Unoptimized image sizes could be reduced, according to Lighthouse, offering a potential savings of 1,223 KiB and improving loading speeds.</li>
+        
+        <li>In a slow 3G connection simulation, First Contentful Paint occurred in 2.8 seconds, suggesting a reasonably fast initial load.</li>
+        
+        <li>Despite the slow connection, the Total Blocking Time was only 50 ms, and the Speed Index was 6.2 seconds, indicating that image optimization could further enhance performance under adverse network conditions.</li>
+      </ul>
+      <img class="mx-auto" src="../images/logotip/ligthhouse_logotip_1.png" alt="Descripción de la imagen">
+
     <main class="text-base text-center p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
+        
         <div>
             <h1>Original PNG</h1>
             <img src="../images/logotip.png" alt="Example 1" class="w-full" />
@@ -46,7 +69,7 @@
             <div class="image-info"></div>
         </div>
         <div>
-            <h1>Original PNG High Compress</h1>
+            <h1>Original PNG Low Compress</h1>
             <img src="../images/logotip/logotip_c_9.png" alt="Example 1" class="w-full" />
             <div class="image-info"></div>
         </div>
@@ -56,8 +79,13 @@
             <div class="image-info"></div>
         </div>
         <div>
-            <h1>Original PNG Low Compress</h1>
+            <h1>Original PNG High Compress</h1>
             <img src="../images/logotip/logotip_c_1.png" alt="Example 1" class="w-full" />
+            <div class="image-info"></div>
+        </div>
+        <div>
+            <h1>Original JPG High Compress</h1>
+            <img src="../images/logotip/logotip_c1.jpg" alt="Example 1" class="w-full" />
             <div class="image-info"></div>
         </div>
         <div>
@@ -66,7 +94,9 @@
             <div class="image-info"></div>
         </div>
     </main>
+ 
     <script src="../scripts/main.js"></script>
 </body>
 
 </html>
+

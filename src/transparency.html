@@ -29,13 +29,103 @@
       </li>
     </ul>
   </nav>
+  <h1 class="text-4xl pl-10">Questions</h1>
+    <p class="text-base text-blue-600 pl-10 pb-10">transparency: What is the most optimal format for this type of image and why? What happens when we save it in JPEG format? If our website has a white background, what format would be the most optimal and why?</p>
+    <p class="text-base text-green-600 pl-10 pb-10"> PNG is also the optimal format for images with transparency, such as logos or graphics with a transparent background. JPEG does not support transparency and saving an image with transparency as a JPEG results in losing the transparent areas, replacing them with a solid color as in the example.
+
+      The website has a white background, it would be optimal to keep the image in PNG format with transparency. This ensures that the image blends seamlessly with the white background, maintaining a clean and professional appearance.
+         </p>
+         <p class="text-base text-blue-600 pl-10 pb-10">Have a look at developerTools' Lighthouse tool. This allows you, among other things, to analyze the loading of the images. Check the performance of the different pages you have created.
+          What does Lighthouse tell about the image related perfomance of your pages? What are the main issues? What are the main recommendations? </p>
+         <ul class="pl-10">
+          <li>
+            <strong>Lighthouse Image-related Performance Analysis:</strong>
+            <ul>
+              <li><strong>Performance Score (92):</strong> Indicates overall good optimization.</li>
+              <li>
+                <strong>Main Metrics:</strong>
+                <ul>
+                  <li>FCP (First Contentful Paint): 2.7s - Quick initial loading, positive user experience.</li>
+                  <li>LCP (Largest Contentful Paint): 44.1s - Improved but still relatively high, room for optimization.</li>
+                  <li>TBT (Total Blocking Time): 70ms - Low impact on user interactivity.</li>
+                  <li>CLS (Cumulative Layout Shift): 0 - Stable layout, no unexpected shifts.</li>
+                  <li>SI (Speed Index): 28.3s - Improved but potential for further optimization.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Recommendations:</strong>
+                <ul>
+                  <li>Optimize images for file size reduction.</li>
+                  <li>Eliminate render-blocking resources for quicker initial loading.</li>
+                  <li>Reduce unused CSS to minimize page weight.</li>
+                  <li>Properly size images to enhance layout stability.</li>
+                  <li>Serve images in next-gen formats for smaller file sizes.</li>
+                  <li>Minimize main-thread work for improved overall performance.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Additional Observations:</strong>
+                <ul>
+                  <li>Address the prevention of cache restoration for better caching behavior.</li>
+                  <li>Minimize third-party usage to reduce main thread blocking.</li>
+                  <li>Identify and optimize long main-thread tasks for improved responsiveness.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <strong>Observations with a Slow 3G Connection:</strong>
+            <ul>
+              <li>Increased Loading Time for Images: Images may take longer to load, impacting overall page load time.</li>
+              <li>Delayed Rendering of Largest Contentful Image (LCP): The delay in loading the largest image might be more pronounced.</li>
+              <li>Total Blocking Time (TBT) Impact: TBT may increase, affecting user interactivity during image loading.</li>
+              <li>Potential for Additional Layout Shifts: A slow connection might exacerbate layout shift issues, affecting visual stability.</li>
+            </ul>
+          </li>
+        </ul>
+        <br>
+        <img class="mx-auto" src="../images/transparency/transparency_analisis.png">
   <main class="text-base text-center p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
     <div>
         <h1>Original</h1>
       <img src="../images/transparency.png" alt="Example 2" class="w-full" />
       <div class="image-info"></div>
     </div>
-   
+    <div>
+      <h1>GIF</h1>
+    <img src="../images/transparency/transparency.gif" alt="Example 2" class="w-full" />
+    <div class="image-info"></div>
+  </div>
+  <div>
+    <h1>JPEG</h1>
+  <img src="../images/transparency/transparency.jpg" alt="Example 2" class="w-full" />
+  <div class="image-info"></div>
+</div>
+<div>
+  <h1>Original PNG Low Compress</h1>
+<img src="../images/transparency/transparency_c_9.png" alt="Example 2" class="w-full" />
+<div class="image-info"></div>
+</div>
+<div>
+  <h1>Original PNG Medium Compress 24bits</h1>
+<img src="../images/transparency/transparency_c_5.png" alt="Example 2" class="w-full" />
+<div class="image-info"></div>
+</div>
+<div>
+  <h1>Original PNG High Compress 32bits</h1>
+<img src="../images/transparency/transparency_c_1.png" alt="Example 2" class="w-full" />
+<div class="image-info"></div>
+</div>
+<div>
+  <h1>Original JPG High Compress </h1>
+<img src="../images/transparency/transparency_c_1.jpg" alt="Example 2" class="w-full" />
+<div class="image-info"></div>
+</div>
+<div>
+  <h1>Original JPG Low Compress </h1>
+<img src="../images/transparency/transparency_c_9.jpg" alt="Example 2" class="w-full" />
+<div class="image-info"></div>
+</div>
   </main>
   <script src="../scripts/main.js"></script>
 </body>
